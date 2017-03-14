@@ -14,7 +14,7 @@ $ composer require "overtrue/laravel-filesystem-qiniu" -vvv
 
 # Configuration
 
-1. After installing the library, register the `Overtrue\LaravelFilesystem\Qiniu\QiniuStorageServiceProvider` in your config/app.php configuration file:
+1. After installing the library, register the `Overtrue\LaravelFilesystem\Qiniu\QiniuStorageServiceProvider` in your `config/app.php` file:
 
   ```php
   'providers' => [
