@@ -1,6 +1,6 @@
 # Laravel filesystem Qiniu 
 
-[Qiniu](www.qiniu.com) storage for Laravel based on [overtrue/flysystem-qiniu](https://github.com/overtrue/flysystem-qiniu).
+[Qiniu](http://www.qiniu.com/) storage for Laravel based on [overtrue/flysystem-qiniu](https://github.com/overtrue/flysystem-qiniu).
 
 # Requirement
 
