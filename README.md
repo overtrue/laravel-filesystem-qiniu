@@ -62,8 +62,7 @@ $disk->copy('old/file1.jpg', 'new/file1.jpg');
 $disk->move('old/file1.jpg', 'new/file1.jpg');
 
 // get file contents
-$contnets = $disk->read('folder/my_file.txt');
-
+$contents = $disk->read('folder/my_file.txt');
 ```
 
 [Full API documentation.](http://flysystem.thephpleague.com/api/)
