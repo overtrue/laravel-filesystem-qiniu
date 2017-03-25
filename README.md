@@ -34,7 +34,7 @@ $ composer require "overtrue/laravel-filesystem-qiniu" -vvv
         'access_key' => env('QINIU_ACCESS_KEY', 'xxxxxxxxxxxxxxxx'),
         'secret_key' => env('QINIU_SECRET_KEY', 'xxxxxxxxxxxxxxxx'),
         'bucket'     => env('QINIU_BUCKET', 'test'),
-        'domain'     => env('QINIU_DOMAIN', 'xxxxx.bkt.clouddn.com'), // or with protocol: https://xxxx.bkt.clouddn.com
+        'domain'     => env('QINIU_DOMAIN', 'xxx.clouddn.com'), // or host: https://xxxx.clouddn.com
      ],
      //...
  ];
