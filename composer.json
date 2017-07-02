@@ -17,5 +17,12 @@
             "email": "i@overtrue.me"
         }
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\LaravelFilesystem\\Qiniu\\QiniuStorageServiceProvider"
+            ]
+        }
+    }
 }
