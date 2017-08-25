@@ -12,6 +12,9 @@ namespace Overtrue\LaravelFilesystem\Qiniu;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
+use Overtrue\Flysystem\Qiniu\Plugins\FetchFile;
+use Overtrue\Flysystem\Qiniu\Plugins\FileUrl;
+use Overtrue\Flysystem\Qiniu\Plugins\UploadToken;
 use Overtrue\Flysystem\Qiniu\QiniuAdapter;
 
 class QiniuStorageServiceProvider extends ServiceProvider
@@ -27,7 +30,13 @@ class QiniuStorageServiceProvider extends ServiceProvider
                 $config['bucket'], $config['domain']
             );
 
-            return new Filesystem($adapter);
+            $flysystem = new Filesystem($adapter);
+
+            $flysystem->addPlugin(new FetchFile());
+            $flysystem->addPlugin(new UploadToken());
+            $flysystem->addPlugin(new FileUrl());
+
+            return $flysystem;
         });
     }
 

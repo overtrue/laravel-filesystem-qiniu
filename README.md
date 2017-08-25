@@ -63,6 +63,16 @@ $disk->move('old/file1.jpg', 'new/file1.jpg');
 
 // get file contents
 $contents = $disk->read('folder/my_file.txt');
+
+// fetch file 
+$file = $disk->fetch('folder/my_file.txt');
+
+// get file urk
+$url = $disk->getUrl('folder/my_file.txt');
+
+// get file upload token
+$token = $disk->getUploadToken('folder/my_file.txt');
+$token = $disk->getUploadToken('folder/my_file.txt', 3600);
 ```
 
 [Full API documentation.](http://flysystem.thephpleague.com/api/)
