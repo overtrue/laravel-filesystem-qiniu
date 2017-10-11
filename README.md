@@ -67,7 +67,7 @@ $contents = $disk->read('folder/my_file.txt');
 // fetch file 
 $file = $disk->fetch('folder/my_file.txt');
 
-// get file urk
+// get file url
 $url = $disk->getUrl('folder/my_file.txt');
 
 // get file upload token
