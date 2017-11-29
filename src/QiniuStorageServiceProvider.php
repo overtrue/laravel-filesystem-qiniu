@@ -15,6 +15,8 @@ use League\Flysystem\Filesystem;
 use Overtrue\Flysystem\Qiniu\Plugins\FetchFile;
 use Overtrue\Flysystem\Qiniu\Plugins\FileUrl;
 use Overtrue\Flysystem\Qiniu\Plugins\UploadToken;
+use Overtrue\Flysystem\Qiniu\Plugins\PrivateDownloadUrl;
+use Overtrue\Flysystem\Qiniu\Plugins\RefreshFile;
 use Overtrue\Flysystem\Qiniu\QiniuAdapter;
 
 class QiniuStorageServiceProvider extends ServiceProvider
@@ -35,6 +37,8 @@ class QiniuStorageServiceProvider extends ServiceProvider
             $flysystem->addPlugin(new FetchFile());
             $flysystem->addPlugin(new UploadToken());
             $flysystem->addPlugin(new FileUrl());
+            $flysystem->addPlugin(new PrivateDownloadUrl());
+            $flysystem->addPlugin(new RefreshFile());
 
             return $flysystem;
         });
