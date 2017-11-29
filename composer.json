@@ -4,7 +4,7 @@
     "require": {
         "php": ">=5.5.9",
         "league/flysystem": "^1.0",
-        "overtrue/flysystem-qiniu": "^1.0"
+        "overtrue/flysystem-qiniu": "^1.0.2"
     },
     "autoload": {
         "psr-4": {
