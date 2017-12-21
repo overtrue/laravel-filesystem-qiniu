@@ -75,6 +75,9 @@ $url = $disk->getUrl('folder/my_file.txt');
 // get file upload token
 $token = $disk->getUploadToken('folder/my_file.txt');
 $token = $disk->getUploadToken('folder/my_file.txt', 3600);
+
+// get private url
+$url = $disk->privateDownloadUrl('folder/my_file.txt');
 ```
 
 [Full API documentation.](http://flysystem.thephpleague.com/api/)
