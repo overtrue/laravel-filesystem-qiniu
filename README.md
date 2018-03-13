@@ -66,8 +66,8 @@ $disk->move('old/file1.jpg', 'new/file1.jpg');
 // get file contents
 $contents = $disk->read('folder/my_file.txt');
 
-// fetch file 
-$file = $disk->fetch('folder/my_file.txt');
+// fetch url content
+$file = $disk->fetch('folder/save_as.txt', $fromUrl);
 
 // get file url
 $url = $disk->getUrl('folder/my_file.txt');
