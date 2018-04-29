@@ -48,7 +48,7 @@ $ composer require "overtrue/laravel-filesystem-qiniu" -vvv
 $disk = Storage::disk('qiniu');
 
 // create a file
-$disk->put('avatars/1', $fileContents);
+$disk->put('avatars/filename.jpg', $fileContents);
 
 // check if a file exists
 $exists = $disk->has('file.jpg');
