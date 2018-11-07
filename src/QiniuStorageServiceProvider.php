@@ -26,7 +26,7 @@ class QiniuStorageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Storage::extend('qiniu', function ($app, $config) {
+        app('filesystem')->extend('qiniu', function ($app, $config) {
             $adapter = new QiniuAdapter(
                 $config['access_key'], $config['secret_key'],
                 $config['bucket'], $config['domain']
