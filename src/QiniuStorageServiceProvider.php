@@ -9,7 +9,6 @@
 
 namespace Overtrue\LaravelFilesystem\Qiniu;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
 use Overtrue\Flysystem\Qiniu\Plugins\FetchFile;
