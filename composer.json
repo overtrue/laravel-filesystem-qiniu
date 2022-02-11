@@ -2,9 +2,9 @@
     "name": "overtrue/laravel-filesystem-qiniu",
     "description": "A Qiniu storage filesystem for Laravel.",
     "require": {
-        "php": ">=5.5.9",
-        "league/flysystem": "^1.0",
-        "overtrue/flysystem-qiniu": "^1.0.2"
+        "php": "^8.0.2",
+        "league/flysystem": "^3.0",
+        "overtrue/flysystem-qiniu": "^2.0.0"
     },
     "autoload": {
         "psr-4": {
