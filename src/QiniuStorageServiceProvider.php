@@ -2,8 +2,8 @@
 
 namespace Overtrue\LaravelFilesystem\Qiniu;
 
+use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\ServiceProvider;
-use League\Flysystem\Config;
 use League\Flysystem\Filesystem;
 use Overtrue\Flysystem\Qiniu\QiniuAdapter;
 
@@ -19,7 +19,7 @@ class QiniuStorageServiceProvider extends ServiceProvider
                 $config['domain']
             );
 
-            return new Filesystem($adapter, new Config(['disable_asserts' => true]));
+            return new FilesystemAdapter(new Filesystem($adapter), $adapter);
         });
     }
 }
