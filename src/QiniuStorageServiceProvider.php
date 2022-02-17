@@ -11,7 +11,7 @@ class QiniuStorageServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        app('filesystem')->extend('qiniu', function ($config) {
+        app('filesystem')->extend('qiniu', function ($app, $config) {
             $adapter = new QiniuAdapter(
                 $config['access_key'],
                 $config['secret_key'],
@@ -19,7 +19,7 @@ class QiniuStorageServiceProvider extends ServiceProvider
                 $config['domain']
             );
 
-            return new FilesystemAdapter(new Filesystem($adapter), $adapter);
+            return new FilesystemAdapter(new Filesystem($adapter), $adapter, $config);
         });
     }
 }
