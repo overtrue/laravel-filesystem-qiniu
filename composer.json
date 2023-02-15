@@ -6,7 +6,7 @@
         "overtrue/flysystem-qiniu": "^3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10.0",
         "mockery/mockery": "^1.4",
         "brainmaestro/composer-git-hooks": "dev-master",
         "laravel/pint": "^1.5"
