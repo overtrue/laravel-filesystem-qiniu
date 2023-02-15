@@ -8,7 +8,8 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "mockery/mockery": "^1.4",
-        "friendsofphp/php-cs-fixer": "^3.3"
+        "brainmaestro/composer-git-hooks": "dev-master",
+        "laravel/pint": "^1.5"
     },
     "autoload": {
         "psr-4": {
@@ -30,11 +31,9 @@
         },
         "hooks": {
             "pre-commit": [
-                "composer test",
                 "composer check-style"
             ],
             "pre-push": [
-                "composer test",
                 "composer check-style"
             ]
         }
@@ -49,8 +48,8 @@
             "cghooks update"
         ],
         "cghooks": "vendor/bin/cghooks",
-        "check-style": "php-cs-fixer fix --using-cache=no --diff --dry-run --ansi",
-        "fix-style": "php-cs-fixer fix --using-cache=no --ansi",
+        "check-style": "vendor/bin/pint --test",
+        "fix-style": "vendor/bin/pint",
         "test": "vendor/bin/phpunit"
     },
     "scripts-descriptions": {
