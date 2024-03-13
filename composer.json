@@ -2,7 +2,7 @@
     "name": "overtrue/laravel-filesystem-qiniu",
     "description": "A Qiniu storage filesystem for Laravel.",
     "require": {
-        "laravel/framework": "^9.0|^10.0",
+        "laravel/framework": "^9.0|^10.0|^11.0",
         "overtrue/flysystem-qiniu": "^3.0"
     },
     "require-dev": {
